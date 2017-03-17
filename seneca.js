@@ -6,7 +6,7 @@
  * of a valid Seneca College email address, `false` othewise.
  */
 exports.isValidEmail = function (email) {
-  return email.includes("@myseneca.ca");
+  return email.includes('@myseneca.ca');
 };
 
 /**
@@ -14,6 +14,6 @@ exports.isValidEmail = function (email) {
  * this person. NOTE: the email doesn't need to be real/valid/active.
  */
 exports.formatSenecaEmail = function (name) {
-  var lastName = name.indexOf(' ');
-  return name.charAt(0).concat(name.substring(lastName + 1), "@seneca.ca");
+  let lastName = name.indexOf(' ');
+  return name.charAt(0).concat(name.substring(lastName + 1), '@seneca.ca');
 };
