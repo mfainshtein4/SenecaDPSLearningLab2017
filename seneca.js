@@ -15,5 +15,5 @@ exports.isValidEmail = function(email) {
  */
 exports.formatSenecaEmail = function(name) {
   var lastName=name.indexOf(' ');
-  return name.charAt(0)+name.substring(lastName+1)+"@seneca.ca";
+  return name.charAt(0) + name.substring(lastName + 1) + "@seneca.ca";
 }
