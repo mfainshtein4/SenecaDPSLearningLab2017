@@ -14,6 +14,6 @@ exports.isValidEmail = function (email) {
  * this person. NOTE: the email doesn't need to be real/valid/active.
  */
 exports.formatSenecaEmail = function (name) {
-  let lastName = name.indexOf(' ');
+  const lastName = name.indexOf(' ');
   return name.charAt(0).concat(name.substring(lastName + 1), '@seneca.ca');
 };
