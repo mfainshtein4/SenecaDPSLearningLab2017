@@ -13,7 +13,9 @@ exports.isValidEmail = function (email) {
  * Given a string `name`, return a formatted Seneca email address for
  * this person. NOTE: the email doesn't need to be real/valid/active.
  */
+  // eg tom smith   lastname=3
 exports.formatSenecaEmail = function (name) {
-  const lastName = name.indexOf(' ');
-  return name.charAt(0).concat(name.substring(lastName + 1), '@seneca.ca');
+  // const lastName = name.indexOf(' ');
+  // return name.charAt(0).concat(name.substring(lastName + 1), '@seneca.ca');
+  return name.concat('@myseneca.ca');
 };

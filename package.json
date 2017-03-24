@@ -4,8 +4,9 @@
   "description": "Learning lab",
   "main": "seneca.js",
   "scripts": {
-    "lint": "node_modules/.bin/eslint *.js",
-    "test": "npm run -s lint"
+    "lint": "node_modules/.bin/eslint seneca.js",
+    "jest": "node_modules/.bin/jest",
+    "test": "npm run -s lint && npm run jest"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,9 @@
   },
   "homepage": "https://github.com/mfainshtein4/SenecaDPSLearningLab2017#readme",
   "devDependencies": {
-    "eslint": "^3.17.1",
+    "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.1.1",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^19.0.2"
   }
 }
