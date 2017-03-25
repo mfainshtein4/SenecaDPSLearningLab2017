@@ -6,7 +6,11 @@
  * of a valid Seneca College email address, `false` othewise.
  */
 exports.isValidEmail = function (email) {
-  return email.includes('@myseneca.ca');
+  const re = new RegExp('^[^ ]*@myseneca.ca|senecac.on.ca|senecacollege.ca$');
+  if (typeof email !== 'string') {
+    return false;
+  }
+  return re.test(email);
 };
 
 /**
@@ -17,5 +21,11 @@ exports.isValidEmail = function (email) {
 exports.formatSenecaEmail = function (name) {
   // const lastName = name.indexOf(' ');
   // return name.charAt(0).concat(name.substring(lastName + 1), '@seneca.ca');
+  if (name == null) {
+    throw new Error('name can\'t be left blank.');
+  }
+  if ((!(/^\w+$/.test(name)))) {
+    throw new Error('no spaces, tabs, or new lines in the name');
+  }
   return name.concat('@myseneca.ca');
 };
