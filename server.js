@@ -47,6 +47,7 @@ app.get('/healthcheck', (req, res) => {
     uptime: process.uptime(),
   });
 });
+
 // Start our web server on port 3000
 app.listen(port, function () {
   console.log('Server started on http://localhost:' + port);
