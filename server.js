@@ -40,6 +40,13 @@ app.get('/format/:name', function (req, res) {
   });
 });
 
+// GET http://localhost:3000/healthcheck
+app.get('/healthcheck', (req, res) => {
+  // Return a JSON formatted response with the current uptime
+  res.json({
+    uptime: process.uptime(),
+  });
+});
 // Start our web server on port 3000
 app.listen(port, function () {
   console.log('Server started on http://localhost:' + port);
